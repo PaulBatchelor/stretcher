@@ -6,17 +6,14 @@
 #include "ftbl.h"
 #include "paulstretch.h"
 
-sp_data *sp;
-sp_ftbl *ft;
-sp_paulstretch *ps;
-
 static void process(sp_data *sp, void *ud)
 {
     SPFLOAT out;
+    sp_paulstretch *ps;
+    ps = ud;
     sp_paulstretch_compute(sp, ps, NULL, &out);
     sp_out(sp, 0, out);
 }
-
 
 /* a little kluge to get file info */
 static int get_info(const char *fname,
@@ -37,6 +34,10 @@ static int get_info(const char *fname,
 
 int main(int argc, char *argv[])
 {
+    sp_data *sp;
+    sp_ftbl *ft;
+    sp_paulstretch *ps;
+
     SPFLOAT stretch;
     SPFLOAT window;
     const char *fin;
@@ -83,7 +84,7 @@ int main(int argc, char *argv[])
 
     sp_paulstretch_init(sp, ps, ft, window, stretch);
 
-    sp_process(sp, NULL, process);
+    sp_process(sp, ps, process);
 
     cleanup:
 
