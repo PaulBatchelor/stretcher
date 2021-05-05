@@ -69,13 +69,17 @@ void sp_fft_destroy(sp_fft *fft);
 #ifndef kiss_fft_scalar
 #define kiss_fft_scalar SPFLOAT
 #endif
+
+#ifndef KISS_FTR_H
 typedef struct {
     kiss_fft_scalar r;
     kiss_fft_scalar i;
 }kiss_fft_cpx;
 
+
 typedef struct kiss_fft_state* kiss_fft_cfg;
 typedef struct kiss_fftr_state* kiss_fftr_cfg;
+#endif
 
 /* SPA: Soundpipe Audio */
 

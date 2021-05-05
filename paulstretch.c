@@ -10,8 +10,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include "soundpipe.h"
+#include "base.h"
+#include "ftbl.h"
 #include "kiss_fftr.h"
+#include "paulstretch.h"
 
 #ifndef M_PI
 #define M_PI		3.14159265358979323846

@@ -5,7 +5,8 @@
 #ifndef NO_LIBSNDFILE
 #include <sndfile.h>
 #endif
-#include "soundpipe.h"
+#include "base.h"
+#include "ftbl.h"
 
 #ifndef M_PI
 #define M_PI 3.14159265358979323846

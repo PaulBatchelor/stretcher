@@ -5,7 +5,7 @@
 #ifndef NO_LIBSNDFILE
 #include <sndfile.h>
 #endif
-#include "soundpipe.h"
+#include "base.h"
 
 int sp_create(sp_data **spp)
 {
