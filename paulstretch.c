@@ -10,9 +10,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include "kiss_fftr.h"
 #include "base.h"
 #include "ftbl.h"
-#include "kiss_fftr.h"
 #include "paulstretch.h"
 
 #ifndef M_PI
